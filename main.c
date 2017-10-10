@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <conio.h>
 
-typedef struct
-{
+typedef struct{
     int dni;
     char nombre[20];
     float altura;
@@ -13,7 +12,7 @@ int newPersona(ePersona*, int, char[], float);
 void personaToString(ePersona*);
 void alta(ePersona*);
 void mostrar(ePersona*);
-void ordenar();
+void ordenar(ePersona*);
 
 int main()
 {
@@ -36,7 +35,7 @@ int main()
         mostrar(&listaPersonas);
         break;
     case '3':
-
+ordenar(&listaPersonas->nombre);
         break;
     }
     return 0;
@@ -67,6 +66,8 @@ void alta(ePersona* listaPersonas)
         {
             printf("Carga fallida");
         }
+
+    }
 }
 
 int  newPersona(ePersona* miPersona, int dni, char nombre[], float altura)
@@ -80,7 +81,6 @@ int  newPersona(ePersona* miPersona, int dni, char nombre[], float altura)
         retorno = 1;
     }
     return retorno;
-
 }
 
 void mostrar(ePersona* listaPersonas)
@@ -91,10 +91,23 @@ void mostrar(ePersona* listaPersonas)
     {
         personaToString(listaPersonas+i);
     }
-
 }
 
 void personaToString(ePersona* miPersona)
 {
     printf("%d--%s--%.2f\n",  miPersona->dni,  miPersona->nombre,  miPersona->altura);
+}
+
+ordenar(ePersona listaPersonas->)
+{
+    char auxNombre[20];
+    int i,j;
+
+    for (i=0;i<5-1;i++)
+    {
+        for (j=i+1;j<5;j++)
+        {
+            if ()
+        }
+    }
 }
